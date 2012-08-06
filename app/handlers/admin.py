@@ -160,7 +160,7 @@ class AdminSnippetView(webapp.RequestHandler):
             return
 
         html = """Snippet: %s<br><br><a href="?del=1">delete</a> <a href=
-        "https://appengine.google.com/datastore/edit?app_id=android-snippets&namespace=&key=%s"
+        "https://appengine.google.com/datastore/edit?app_id=moaisnippets&namespace=&key=%s"
         target="_blank">edit</a>
         """ % (snippet.title, snippet.key())
         self.response.out.write(html)

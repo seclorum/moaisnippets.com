@@ -86,8 +86,8 @@ class Main(webapp.RequestHandler):
 
 
 class LegacySnippetView(webapp.RequestHandler):
-    """Redirects for snippets of legacy androidsnippets.org, which have
-    links such as http://androidsnippets.org/snippets/198
+    """Redirects for snippets of legacy moaisnippets.org, which have
+    links such as http://moaisnippets.org/snippets/198
 
     Also handles /snippets/new, /snippets/active, etc.
     """
@@ -108,7 +108,7 @@ class LegacySnippetView(webapp.RequestHandler):
                     "snippets_notfound.html", values))
             return
 
-        self.redirect("http://www.androidsnippets.com/%s" % \
+        self.redirect("http://www.moaisnippets.com/%s" % \
                 snippet.slug1, permanent=True)
 
 
@@ -128,7 +128,7 @@ class SnippetDownloadView(webapp.RequestHandler):
         self.response.headers['Content-Type'] = "application/octet-stream"
         self.response.headers['content-disposition'] = \
                 "attachment; filename=%s.java" % snippet.slug1
-        self.response.out.write("%s\n// see http://androidsnippets.com/%s" % \
+        self.response.out.write("%s\n// see http://moaisnippets.com/%s" % \
                 (snippet.code, snippet.slug1))
 
 
@@ -507,9 +507,9 @@ class AboutView(webapp.RequestHandler):
                 sender = decode(self.request.get('email'))
             logging.info("feedback '%s' from %s" % (msg, sender))
             message = mail.EmailMessage()
-            message.sender = "Android Snippets <hello@androidsnippets.com>"
-            message.to = "chris@androidsnippets.com"
-            message.subject = "Android snippets feedback"
+            message.sender = "MOAI Snippets <hello@moaisnippets.com>"
+            message.to = "feedback@moaisnippets.com"
+            message.subject = "MOAI snippets feedback"
             message.body = "Feedback from: %s:\n\n%s" % (sender, msg)
             message.send()
 

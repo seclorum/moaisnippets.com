@@ -60,7 +60,7 @@ def sitemap(force_update=False):
     urls = []
     for snippet in snippets:
         urls.append({
-            "loc": "http://www.androidsnippets.com/%s" % snippet.slug1,
+            "loc": "http://www.moaisnippets.com/%s" % snippet.slug1,
             "lastmod": snippet.date_lastactivity,
             'priority': 0.9
         })
@@ -70,7 +70,7 @@ def sitemap(force_update=False):
     tags.order("-date_added")
     for tag in tags:
         urls.append({
-            "loc": "http://www.androidsnippets.com/tags/%s" % tag.name,
+            "loc": "http://www.moaisnippets.com/tags/%s" % tag.name,
             "lastmod": tag.date_added,
             'priority': 0.7
         })
@@ -81,7 +81,7 @@ def sitemap(force_update=False):
     #_users.order("-date_lastactivity")
     for user in _users:
         urls.append({
-            "loc": "http://www.androidsnippets.com/users/%s" % user.nickname,
+            "loc": "http://www.moaisnippets.com/users/%s" % user.nickname,
             "lastmod": user.date_lastactivity,
             'priority': 0.4
         })

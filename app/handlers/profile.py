@@ -180,9 +180,9 @@ class ProfileView(webapp.RequestHandler):
                     #return
                     message = mail.EmailMessage()
                     message.sender = \
-                        "Android Snippets <hello@androidsnippets.com>"
+                        "MOAI Snippets <hello@moaisnippets.com>"
                     message.to = email
-                    message.subject = "Android snippets email verification"
+                    message.subject = "MOAI snippets email verification"
                     message.body = body_text
                     #message.html = email_body_html
                     message.send()

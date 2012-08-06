@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-    <loc>http://www.androidsnippets.com</loc>
+    <loc>http://www.moaisnippets.com</loc>
     <lastmod>{{ d|date:"Y-m-d" }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
 </url>
 <url>
-    <loc>http://www.androidsnippets.com/new</loc>
+    <loc>http://www.moaisnippets.com/new</loc>
     <lastmod>{{ d|date:"Y-m-d" }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
 </url>
 <url>
-    <loc>http://www.androidsnippets.com/active</loc>
+    <loc>http://www.moaisnippets.com/active</loc>
     <lastmod>{{ d|date:"Y-m-d" }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
 </url>
 <url>
-    <loc>http://www.androidsnippets.com/popular</loc>
+    <loc>http://www.moaisnippets.com/popular</loc>
     <lastmod>{{ d|date:"Y-m-d" }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
 </url>
 <url>
-    <loc>http://www.androidsnippets.com/comments</loc>
+    <loc>http://www.moaisnippets.com/comments</loc>
     <lastmod>{{ d|date:"Y-m-d" }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
 </url>
 <url>
-    <loc>http://www.androidsnippets.com/tags</loc>
+    <loc>http://www.moaisnippets.com/tags</loc>
     <lastmod>{{ d|date:"Y-m-d" }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
 </url>
 <url>
-    <loc>http://www.androidsnippets.com/users</loc>
+    <loc>http://www.moaisnippets.com/users</loc>
     <lastmod>{{ d|date:"Y-m-d" }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>

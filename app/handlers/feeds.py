@@ -42,19 +42,20 @@ class FeedView(webapp.RequestHandler):
             snippets = s.fetch(30)
             for snippet in snippets:
                 items.append(PyRSS2Gen.RSSItem(title="%s" % snippet.title,
-                    link="http://www.androidsnippets.com/%s" % snippet.slug1,
+                    link="http://www.moaisnippets.com/%s" % snippet.slug1,
                     description=snippet.description_md,
-                    guid=PyRSS2Gen.Guid("http://www.androidsnippets.com/%s" \
+                    guid=PyRSS2Gen.Guid("http://www.moaisnippets.com/%s" \
                             % snippet.slug1),
                     pubDate=datetime.datetime(2003, 9, 6, 21, 31)
                 ))
 
             rss = PyRSS2Gen.RSS2(
-                title="Android Snippets - Latest Snippets",
-                link="http://www.androidsnippets.com",
-                description="Feed with new snippets on AndroidSnippets.com, \
+                title="MOAI Snippets - Latest Snippets",
+                link="http://www.moaisnippets.com",
+                description="Feed with new snippets on moaisnippets.com, \
                     a community driven website for finding, exploring, sharing\
-                    and improving source code snippets for Android.",
+                    and improving source code snippets for the MOAI development\
+                    framework.",
                 lastBuildDate=datetime.datetime.utcnow(),
                 items=items)
 
@@ -71,20 +72,20 @@ class FeedView(webapp.RequestHandler):
             for comment in comments:
                 items.append(PyRSS2Gen.RSSItem(
                     title="New comment on '%s'" % comment.snippet.title,
-                    link="http://www.androidsnippets.com/%s" % \
+                    link="http://www.moaisnippets.com/%s" % \
                             comment.snippet.slug1,
                     description=comment.comment_md,
-                    guid=PyRSS2Gen.Guid("http://www.androidsnippets.com/%s" \
+                    guid=PyRSS2Gen.Guid("http://www.moaisnippets.com/%s" \
                             % comment.snippet.slug1),
                     pubDate=datetime.datetime(2003, 9, 6, 21, 31)
                 ))
 
             rss = PyRSS2Gen.RSS2(
-                title="Android Snippets - Latest Comments",
-                link="http://www.androidsnippets.com",
-                description="AndroidSnippets is a community driven website \
+                title="MOAI Snippets - Latest Comments",
+                link="http://www.moaisnippets.com",
+                description="MOAISnippets is a community driven website \
                     for finding, exploring, sharing and improving source code \
-                    snippets for Android.",
+                    snippets for the MOAI development framework.",
                 lastBuildDate=datetime.datetime.utcnow(),
                 items=items)
 

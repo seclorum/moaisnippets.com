@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head %}
-    <title>{{ snippet.title }} - Android Snippets</title>
+    <title>{{ snippet.title }} - MOAI Snippets</title>
     <meta name="description" content="{{ snippet.description|truncatewords:300 }}" />     
 {% endblock %}
 
@@ -22,7 +22,7 @@
         
         ZeroClipboard.setMoviePath( '/swf/ZeroClipboard10.swf' );
         clip = new ZeroClipboard.Client();
-        clip.setText($("#input_code").html().replace("&lt;", "<").replace("&gt;", ">") + "\n// see http://androidsnippets.com/{{ snippet.slug1 }}");
+        clip.setText($("#input_code").html().replace("&lt;", "<").replace("&gt;", ">") + "\n// see http://moaisnippets.com/{{ snippet.slug1 }}");
         clip.setHandCursor( true );
 		clip.addEventListener('complete', function() { alert("The snippet is now in your clipboard."); });        
         clip.glue( 'd_clip_button', 'd_clip_container' );
@@ -115,7 +115,7 @@
 
     function view_plain() {
         var wnd=window.open('','_blank','width=750, height=400, location=0, resizable=1, menubar=0, scrollbars=0');
-        wnd.document.write('<textarea style="width:99%;height:99%">'+$("#input_code").html()+'\n// see http://www.androidsnippets.com/{{ snippet.slug1 }}</textarea>');
+        wnd.document.write('<textarea style="width:99%;height:99%">'+$("#input_code").html()+'\n// see http://www.moaisnippets.com/{{ snippet.slug1 }}</textarea>');
         wnd.document.close();    
     }
     </script>
