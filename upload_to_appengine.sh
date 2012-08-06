@@ -26,7 +26,7 @@ function static_toprod {
 
 function upload {
   # Upload to appengine
-  ~/Tools/google_appengine/appcfg.py update app
+  appcfg.py update app
 }
 
 function build {
