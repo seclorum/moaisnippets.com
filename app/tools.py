@@ -5,6 +5,9 @@ from operator import itemgetter
 from urllib import urlopen
 
 from google.appengine.api import memcache
+from google.appengine.dist import use_library
+use_library('django', '1.2')
+
 from django.utils import simplejson as json
 
 import akismet

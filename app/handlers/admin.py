@@ -3,6 +3,8 @@ import logging
 import time
 import datetime
 from urllib import unquote
+from google.appengine.dist import use_library
+use_library('django', '1.2')
 
 from google.appengine.api import users
 from google.appengine.api import memcache
