@@ -154,11 +154,11 @@ class SnippetsNew(webapp.RequestHandler):
         # Prepare Tweet
         if not settings.IS_TESTENV:
             url = shorturl("http://www.moaisnippets.com/%s" % slug)
-            max_status_len = 140 - len(url) - 11  # 10 = 2 spaces,:,#android
+            max_status_len = 140 - len(url) - 13  # 10 = 2 spaces,:,#moai #lua
             status = s.title
             if len(status) > max_status_len:
                 status = "%s..." % status[:max_status_len - 3]
-            status = "%s: %s #android" % (status, url)
+            status = "%s: %s #moai #lua" % (status, url)
             logging.info("tweet: '%s' (%s)" % (status, len(status)))
             tweet(status)
 

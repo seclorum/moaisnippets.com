@@ -141,6 +141,7 @@
         <span style="color:#777; font-weight:bold;" id="upvote_count">{{ snippet.upvote_count }}</span> vote{{ snippet.upvote_count|pluralize }} · 
         <a href="#comments">{{ snippet.comment_count }} comment{{ snippet.comment_count|pluralize }}</a>
         {% if prefs.level > 40 %} · <a href="javascript:toggle_ui_to_editor()">edit</a>{% endif %}
+        {% if prefs.level > 40 %} · <a href="http://www.moaisnippets.info/admin/snippet/{{snippet.key}}?del=1">delete</a>{% endif %}
     </div>
     
     <div id="main_container">                       
