@@ -153,6 +153,7 @@
             </div>            
         </div>
 
+
         <div id="code">
             <pre name="code" id="code_pre" class="prettyprint"><div id="toolbar" class="nocode"><div style="float:left;"><a href="javascript:view_plain()">raw</a> · </div><div id="d_clip_container" style="position:relative;display:inline; float:left; "><div id="d_clip_button">copy</div></div> · <a href="/{{ snippet.slug1 }}/download">download</a></div>{{ snippet.code|escape }}</pre>
         </div>
@@ -173,6 +174,8 @@
     <div style="margin-left:12px;">
         <a href="/users/{{ snippet.userprefs.nickname }}" title="{{ snippet.userprefs.nickname }}"><img src="http://www.gravatar.com/avatar/{{ snippet.userprefs.email_md5 }}?s=20" width="20" height="20" alt="{{ snippet.userprefs.nickname }}" /></a>
     </div>
+
+
     <hr>
     
     <p>Tags</p>                
@@ -202,7 +205,12 @@
 </table>
 
 </form>
-
+<div style="margin-left:12px;">
+    <form method="post" action="http://moaifiddle.com/snippet/edit/" target="_blank">
+    <input type="hidden" value="{{ snippet.code }}" name="fiddle" >
+    <input type="submit" value="EDIT this Snippet in MOAIFiddle">
+    </form>
+</div>
 <div id="comments">
 <a name="comments"></a>
     {% if snippet.comment_count %}
@@ -246,8 +254,6 @@
         {{ comments_html|safe }}
     </div>
 </div>
-
-
 
 <div id="dialog" title="Snippet Revisions" style="display:none;">
 	<p>
